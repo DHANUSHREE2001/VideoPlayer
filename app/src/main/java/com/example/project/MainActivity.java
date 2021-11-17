@@ -83,26 +83,7 @@ public class MainActivity extends AppCompatActivity {
         AppBarText = findViewById(R.id.AppBarText);
         User = findViewById(R.id.user);                                                                                                                                                            final PopupMenu dropDownMenu = new PopupMenu(getApplicationContext(), User);
 
-        final Menu menu = dropDownMenu.getMenu();
-        menu.add(0, 0, 0, "Login");
-        menu.add(0, 1, 0, "History");
-
-        dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case 0:
-                        Intent iLogin = new Intent(getApplicationContext(),Login.class);
-                        startActivity(iLogin);
-                        return true;
-                    case 1:
-                        Intent iHistory = new Intent(getApplicationContext(),History.class);
-                        startActivity(iHistory);
-                        return true;
-                }
-                return false;
-            }
-        });
+        
 
         User.setOnClickListener(new View.OnClickListener() {
             @Override
